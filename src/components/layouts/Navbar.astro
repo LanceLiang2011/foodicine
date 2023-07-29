@@ -1,9 +1,61 @@
 ---
+import NavLinks from "./NavLinks.astro";
+import logo from "/Innovo_logo.svg";
 ---
 
-<nav class="bg-white border-gray-200">
+<nav
+  id="navbar"
+  class="bg-white border-gray-200 fixed top-0 left-0 right-0 shadow-md z-30"
+>
   <div
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 md:p-4"
   >
+    <a href="/" class="flex items-center">
+      <img class="w-44" src={logo} alt="logo of Innovo" />
+    </a>
+
+    <!-- Hamburger btn -->
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <!-- nav link -->
+    <NavLinks />
   </div>
 </nav>
+
+<script>
+  let lastScrollTop = 0; // holds the scrolling position at the last scroll event
+  const navbar = document.querySelector("#navbar") as HTMLDivElement; // select your navbar using its ID
+
+  window.onscroll = function () {
+    const scrollTop = window.scrollY;
+    if (scrollTop > lastScrollTop) {
+      // Downscroll
+      navbar.style.display = "none";
+    } else {
+      // Upscroll
+      navbar.style.display = "block";
+    }
+    lastScrollTop = scrollTop;
+  };
+</script>
