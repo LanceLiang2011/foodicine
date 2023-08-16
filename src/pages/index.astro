@@ -1,26 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Intro from "../components/Home/Intro.astro";
-import WhyChooseUs from "../components/Home/WhyChooseUs.astro";
-import WhatWeDo from "../components/Home/WhatWeDo.astro";
-import AboutUs from "../components/Home/AboutUs.astro";
 import Problem from "@/components/Home/Problem.astro";
 import Solution from "@/components/Home/Solution.astro";
-import HowDoWeDo from "@/components/Home/HowDoWeDo.astro";
 import WhyChoose from "../components/Home/WhyChoose.astro";
-import Team from "../components/Team.astro";
 ---
 
 <Layout title="Innovo | Home page">
-  <div class="flex flex-col">
     <Intro />
-    <WhyChooseUs />
-    <WhatWeDo />
-    <AboutUs />
-    <Problem />
-    <Solution />
-    <HowDoWeDo />
-    <WhyChoose />
-    <Team />
-  </div>
+    <div class=" flex flex-col items-center w-screen">
+      <Problem />
+      <Solution />
+      <WhyChoose />
+    </div>
 </Layout>

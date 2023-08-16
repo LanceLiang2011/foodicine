@@ -1,10 +1,15 @@
 ---
+import Button from "../Button.astro";
 ---
 
-<div class="bg-hero-image w-screen py-24 mb-20">
+<div class="bg-hero-image w-screen py-24 mb-20 flex flex-col">
   <h1
     class="uppercase font-semibold text-primary-1 text-4xl md:text-5xl mb-10 bg-opacity-70 bg-secondary-gray drop-shadow mx-8 px-6 md:mx-12 md:px-8 py-8"
   >
-    Unlock your healthcare and life science investment potential
+  Unlock your healthcare investment potential with INNOVO
   </h1>
+  <div class=" mx-auto flex">
+    <Button href="service" content="Services" />
+    <Button href="about" content="Contact Us" />
+  </div>
 </div>
