@@ -1,16 +1,12 @@
 ---
+import Hero from "@/components/Home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import Intro from "../components/Home/Intro.astro";
-import Problem from "@/components/Home/Problem.astro";
-import Solution from "@/components/Home/Solution.astro";
-import WhyChoose from "../components/Home/WhyChoose.astro";
+import Intro from "@/components/Home/Intro.astro";
 ---
 
-<Layout title="Innovo | Home page">
-    <Intro />
-    <div class=" flex flex-col items-center w-screen">
-      <Problem />
-      <Solution />
-      <WhyChoose />
+<Layout title="Foodicine | Home page">
+    <div class=" px-6 sm:px-8 md:px-20 lg:px-28">
+        <Hero />
+        <Intro />
     </div>
 </Layout>
